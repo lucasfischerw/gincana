@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
+    <title>Administrar Votações</title>
+    <link rel="stylesheet" type="text/css" href="css/style.css">
+    <link rel="shortcut icon" href="./images/favicon/favicon.ico">
+    <link rel="icon" type="image/png" sizes="16x16" href="./images/favicon/favicon-16x16.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="192x192" href="./images/favicon/android-chrome-192x192.png">
+    <link rel="icon" type="image/png" sizes="512x512" href="./images/favicon/android-chrome-512x512.png">
+    <link rel="apple-touch-icon" href="./images/favicon/apple-touch-icon.png">
+    <link rel="manifest" href="./images/favicon/site.webmanifest" />
+</head>
+<body>
+    <div class="admin-vote-options-container">
+        <div class="header-admin">
+            <h1>Gincana Sinodal</h1>
+            <p>Administrar votação</p>
+        </div>
+        <div id="auth">
+            <p class="red-msg">Tentativas não autorizadas de acessar ou burlar essa página resultarão na desclassificação da turma.</p>
+            <input placeholder="Email" id="email-input">
+            <input placeholder="Senha" type="password" id="password-input">
+            <button id="login-btn">Login</button>
+            <p id="warning-auth"></p>
+        </div>
+        <div id="background-admin" class="background-admin">
+            <div class="admin-flex">
+                <input id="voteOpen-input" type="checkbox">
+                <p>Votação Aberta</p>
+            </div>
+            <div>
+                <p>Timeout</p>
+                <input id="timeout-input" type="number" placeholder="Timeout">
+            </div>
+            <div>
+                <p>Opções da votação</p>
+                <input id="voteOptions-input" type="text" placeholder="Opções da votação">
+            </div>
+            <div>
+                <p>Tipo da Votação</p>
+                <select id="voteType-input">
+                    <option value="0">Menu Dropdow</option>
+                    <option value="1">Múltipla escolha</option>
+                    <option value="2">Nota (1 - 10)</option>
+                </select>
+            </div>
+            <div>
+                <p>Mensagem da votação fechada</p>
+                <input id="warningMsg-input" type="text" placeholder="Mensagem de encerrar">
+            </div>
+            <div>
+                <p>Explicação da Votação</p>
+                <input id="welcomeMsg-input" type="text" placeholder="Mensagem de início">
+            </div>
+            <button id="save-btn">Salvar</button>
+            <div id="relative" class="relative">
+                <button id="delete-first" class="danger">Excluir tudo</button>
+                <div id="master-warning">
+                    <p>Tem certeza que gostaria de excluir todos os resultados da votação? Essa ação não pode ser desfeita.</p>
+                    <button id="delete-btn" class="danger">Excluir mesmo assim</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script type="module" src="./js/admin.js"></script>
+</body>
+</html>
